@@ -1,0 +1,68 @@
+.main {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+}
+
+.board {
+    position: relative;
+    width: rem(1024);
+    height: rem(863);
+    margin: auto;
+    background: url(/images/board.jpg) no-repeat;
+
+    &__message {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: rgb(83, 175, 19);
+    }
+
+    &__table {
+        position: absolute;
+        left: rem(173);
+        top: rem(100);
+        border-spacing: 0px;
+    }
+
+    &__row td {
+        width: rem(96);
+        height: rem(96);
+    }
+
+    &__hit {
+        background: url(/images/ship.png) no-repeat center center;
+    }
+
+    &__miss {
+        background: url(/images/miss.png) no-repeat center center;
+    }
+
+    &__form {
+        position: absolute;
+        bottom: rem(-20);
+        right: 0;
+        padding: rem(15);
+        background-color: rgb(83, 175, 19);
+    }
+
+    &__input {
+        padding: rem(2) rem(5);
+        cursor: pointer;
+        background-color: rgb(152, 207, 113);
+        border-color: rgb(93, 175, 19);
+        font-size: 1em;
+    }
+
+    &__input:hover {
+        background-color: lighten($color: rgb(152, 207, 113), $amount: 10);
+    }
+
+    &__input:focus {
+        outline: none;
+        cursor: default;
+    }
+
+    &__input-button:focus {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,166 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  background: #000000;
+  line-height: 1;
+  font-family: "";
+  font-size: 1.125rem;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стчі будуть застосовуватись до 
+всіх класів що містять *__container
+наприклад header__container, main__container и т.д.
+Сніппет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 100rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+.main {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.board {
+  position: relative;
+  width: 64rem;
+  height: 53.9375rem;
+  margin: auto;
+  background: url(/images/board.jpg) no-repeat;
+}
+.board__message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(83, 175, 19);
+}
+.board__table {
+  position: absolute;
+  left: 10.8125rem;
+  top: 6.25rem;
+  border-spacing: 0px;
+}
+.board__row td {
+  width: 6rem;
+  height: 6rem;
+}
+.board__hit {
+  background: url(/images/ship.png) no-repeat center center;
+}
+.board__miss {
+  background: url(/images/miss.png) no-repeat center center;
+}
+.board__form {
+  position: absolute;
+  bottom: -1.25rem;
+  right: 0;
+  padding: 0.9375rem;
+  background-color: rgb(83, 175, 19);
+}
+.board__input {
+  padding: 0.125rem 0.3125rem;
+  cursor: pointer;
+  background-color: rgb(152, 207, 113);
+  border-color: rgb(93, 175, 19);
+  font-size: 1em;
+}
+.board__input:hover {
+  background-color: #b4dc97;
+}
+.board__input:focus {
+  outline: none;
+  cursor: default;
+}
+.board__input-button:focus {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
